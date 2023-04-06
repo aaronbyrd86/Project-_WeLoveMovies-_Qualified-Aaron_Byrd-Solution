@@ -4,9 +4,10 @@ const app = express();
 const moviesRouter = require("./movies/movies.router");
 const theatersRouter = require("./theaters/theaters.router");
 const reviewsRouter = require("./reviews/reviews.router");
+const cors = require("cors")
 
 app.use(express.json());
-
+app.use(cors({origin: "http://localhost:3000"}));
 app.use("/movies", moviesRouter);
 app.use("/theaters", theatersRouter);
 app.use("/reviews", reviewsRouter);
