@@ -23,5 +23,5 @@ exports.up = function (knex) {
 };
 
 exports.down = function (knex) {
-  return knex.schema.dropTables("reviews");
+  return knex.schema.dropTable("reviews");
 };
